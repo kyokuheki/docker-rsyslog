@@ -9,7 +9,7 @@ RUN apk add --no-cache \
 COPY assets/logrotate.conf /etc/logrotate.conf
 
 RUN set -x \
- && chmod 644 /etc/logrotate.conf /etc/rsyslog.conf \
+ && chmod 644 /etc/logrotate.conf \
  && mkdir -p /var/spool/rsyslog
 
 VOLUME ["/etc/rsyslog", "/var/log", "/var/run/dev", "/run/systemd/journal"]
